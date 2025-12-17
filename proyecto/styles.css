@@ -1,0 +1,274 @@
+/* --- ESTILOS CSS --- */
+        :root {
+            --primary: #6200ea;
+            --dark: #121212;
+            --dark-card: #1e1e1e;
+            --text: #ffffff;
+            --accent: #00e676;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: #4a1170;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            background-color: #6C2088;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            color: #eede54;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .menu-btn {
+            background: none;
+            border: none;
+            color: #eede54;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .cart-indicator {
+            background: var(--primary);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+        .Login{
+          background: var(--primary);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            z-index: 200;
+            top: 0;
+            left: -250px;
+            background-color: #6C2088;
+            overflow-x: hidden;
+            transition: 0.3s;
+            padding-top: 60px;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+        }
+
+        .sidebar a {
+            padding: 15px 25px;
+            text-decoration: none;
+            font-size: 18px;
+            color: White;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            color: #f1f1f1;
+            background-color: var(--primary);
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+            cursor: pointer;
+        }
+
+        /* Grid de Productos */
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            background-color: #3C7D47;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.2s;
+            border: 1px solid #333;
+        }
+
+
+.product-img {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.product-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+
+        .btn {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 5px;
+            font-weight: bold;
+        }
+
+        .btn-add { background-color: #D79832; color: white; }
+        .btn-add:hover { background-color: #996D26; }
+        
+        .btn-details { background-color: transparent; border: 1px solid #D74A7B; color: #D74A7B; }
+        .btn-details:hover { background-color: #D74A7B; color: black; }
+
+        /* Modales */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 300; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            background-color: rgba(0,0,0,0.8); 
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: var(--dark-card);
+            padding: 20px;
+            border: 1px solid #444;
+            width: 90%;
+            max-width: 500px;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .close-modal {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .detail-list li {
+            margin-bottom: 8px;
+            list-style: none;
+            border-bottom: 1px solid #333;
+            padding-bottom: 5px;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            border-bottom: 1px solid #333;
+        }
+        /* Modal 9999999 */
+.modal {
+    display: none;
+    position: centered;
+    z-index: 100;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 0%;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+    background: #1f1f1f;
+    margin: auto;
+    padding: 20px;
+    border-radius: 12px;
+    width: 70%;
+    max-width: 850px;
+    color: white;
+    animation: fadeIn 0.3s ease;
+}
+
+.close {
+    float: right;
+    font-size: 28px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.details-container {
+    display: flex;
+    gap: 20px;
+}
+
+.detail-img {
+    width: 250px;
+    height: 300px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.detail-info {
+    flex: 1;
+}
+
+.detail-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.detail-list li {
+    padding: 6px 0;
+    font-size: 1.1em;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to   { opacity: 1; transform: scale(1); }
+}
+
+/* Estilos para la descripción del juego en el modal */
+.detail-description {
+    font-family: 'Poppins', sans-serif; /* Fuente moderna */
+    font-size: 25px; /* Tamaño legible */
+    line-height: 1.2; /* Espaciado entre líneas */
+    color: #da1313; /* Color oscuro sobre fondo claro */
+    background-color: rgb(0, 0, 0); /* Fondo suave */
+    border-radius: 15px; /* Bordes redondeados */
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.detail-description strong {
+    color: #eede54; /* Color dorado para resaltar palabras clave */
+}
+
+.detail-info {
+    padding: 15px;
+}

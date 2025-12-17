@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universal Games - Tienda Online</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+       <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+    <header>
+        <button class="menu-btn" onclick="toggleSidebar()"><i class="fas fa-bars"></i></button>
+        <h2><i class="fas fa-gamepad"></i> UNIVERSAL GAMES</h2>
+        <div>
+        <div class="login-indicator" onclick="GotoLOgin">
+            
+            
+            
+<p class="Login">
+  <a href="LOGIN.html">Cerrar sesion</a>
+</p>
+
+        </div>
+        <div class="cart-indicator" onclick="openCart()">
+            <i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span>
+        </div>
+        </div>
+    </header>
+
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="close-btn" onclick="toggleSidebar()">&times;</a>
+        <a href="#" onclick="openCart()"><i class="fas fa-box-open"></i> Ver Inventario (Carrito)</a>
+        <a href="#" onclick="openContact()"><i class="fas fa-envelope"></i> Contacto</a>   
+          
+    </p>
+    
+    
+
+        </div>
+
+
+    <div class="container">
+        <h1>Catálogo de Juegos</h1>
+        <div id="products-container" class="products-grid">
+            <div style="text-align: center; width: 100%;">Cargando productos...</div>
+        </div>
+    </div>
+
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('productModal')">&times;</span>
+            <h2 id="modal-title">Título</h2>
+            <div id="modal-body">
+                </div>
+            <button class="btn btn-add" style="margin-top: 15px;" id="modal-add-btn">Agregar al Carrito</button>
+            <button class="btn btn-details" style="margin-top: 5px;" onclick="openContactWithSubject()">Contactar por este artículo</button>
+        </div>
+    </div>
+
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('cartModal')">&times;</span>
+            <h2><i class="fas fa-shopping-cart"></i> Tu Inventario</h2>
+            <div id="cart-items" style="max-height: 300px; overflow-y: auto;">
+                </div>
+            <div style="margin-top: 20px; text-align: right;">
+                <h3>Total: $<span id="cart-total">0.00</span></h3>
+                <button class="btn btn-add">Proceder al Pago</button>
+            <p >    
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('contactModal')">&times;</span>
+            <h2>Contacto</h2>
+            <form id="contactForm">
+                <p>Asunto:</p>
+                <input type="text" id="contact-subject" style="width: 100%; padding: 8px; margin-bottom: 10px;" placeholder="Consulta general">
+                <p>Mensaje:</p>
+                <textarea style="width: 100%; height: 100px; padding: 8px;"></textarea>
+                <button type="button" class="btn btn-add" onclick="alert('Mensaje enviado (Simulado)')">Enviar</button>
+            </form>
+        </div>
+    </div>
+    <!-- Modal de Detalles -->
+<div id="detailsModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeDetails()">&times;</span>
+
+        <div class="details-container">
+            <img id="detail-image" class="detail-img" src="" alt="Imagen del juego">
+
+            <div class="detail-info">
+                <h2 id="detail-name"></h2>
+                <p id="detail-description" class="detail-description"></p>
+
+
+                <ul class="detail-list">
+                    <li><strong>Género:</strong> <span id="detail-genre"></span></li>
+                    <li><strong>Plataforma:</strong> <span id="detail-platform"></span></li>
+                    <li><strong>Precio:</strong> $<span id="detail-price"></span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+	  <script src="script.js"></script>
+</body>
+</html>

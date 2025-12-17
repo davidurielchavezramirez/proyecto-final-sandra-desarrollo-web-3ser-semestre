@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login V3</title>
+  <link rel="stylesheet" href="LOGIN.css">
+</head>
+<body>
+
+  <!-- cambiosdavid -->
+
+ <div id="contenido"></div>
+
+    <script>
+        fetch("pagina2.html")
+            .then(response => {
+                if (!response.ok) throw new Error("Error al cargar el HTML");
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById("contenido").innerHTML = data;
+            })
+            .catch(error => console.error(error));
+    </script>
+  <!--david -->
+
+  <!-- Texto amarillo vertical -->
+  <div class="vertical-text">
+    <span>UNIVERSAL</span>
+    <span>GAMES</span>
+  </div>
+
+  <!-- Caja blanca -->
+  <div class="container">
+
+    <h2>WELCOME BACK, COSMONAUT!</h2>
+
+    <label>Email Address:</label>
+    <input type="email" id="correo" placeholder="E.X: EXAMPLE@OUTLOOK.COM">
+
+    <label>Password:</label>
+    <input type="password" id="contrasena" placeholder="E.X: PASSWORD">
+    
+ <!-- este boton te envia a la pagina principal pero falta que confirme los datos para poder entrar -->
+<button id="btnLogin" class="login">Login</button>
+
+
+    <!-- Aquí aparece el mensaje -->
+    <p id="mensaje"></p>
+
+<p class="signup">
+  DON’T HAVE AN ACCOUNT? 
+  <a href="NEW ACCOUNT.html">SIGN UP!</a>
+</p>
+
+  <script src="LOGIN.js"></script>
+
+</body>
+</html>
+
+
