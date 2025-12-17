@@ -8,7 +8,12 @@ body {
   height: 100vh;
   color: #000;
 }
-
+equipo
+grupo 2-2
+David Uriel chavez ramirez
+Emiliano perez saabedra
+Andres Benites trejo
+Rommel Ponce Manjarrez
 /* Texto vertical amarillo */
 .vertical-text {
   position: absolute;
@@ -107,4 +112,5 @@ button {
   .vertical-text {
     display: none !important;
   }
+
 }
